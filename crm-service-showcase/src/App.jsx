@@ -7,6 +7,9 @@ import Footer from './components/Footer'
 import CRMFeatures from './components/CRMFeatures'
 import CRMWorkflow from './components/CRMWorkflow'
 import CRMDashboard from './components/CRMDashboard'
+import CustomerJourneyMap from './components/CustomerJourneyMap'
+import CRMIntegrationMap from './components/CRMIntegrationMap'
+import CaseStudies from './components/CaseStudies'
 
 function App() {
   return (
@@ -20,7 +23,10 @@ function App() {
                 <Hero />
                 <CRMFeatures />
                 <CRMWorkflow />
+                <CustomerJourneyMap />
                 <CRMDashboard />
+                <CRMIntegrationMap />
+                <CaseStudies />
                 <Pricing />
               </>
             } />
