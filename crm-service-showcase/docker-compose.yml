@@ -1,0 +1,7 @@
+version: '3'
+services:
+   vite-app:
+    build: .
+    container_name: vite-react-app
+    ports:
+      - "3000:80"  # Exposing port 80 of the container to port 3000 on the host
