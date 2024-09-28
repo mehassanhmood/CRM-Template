@@ -36,18 +36,18 @@ export default function CRMIntegrationMap() {
   const [edges] = useState(initialEdges);
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12 bg-teal-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-teal-950 sm:text-4xl">
             CRM Integration Map
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="mt-4 text-xl text-teal-900">
             Explore how our CRM system integrates with various tools
           </p>
         </div>
 
-        <div className="mt-10 bg-white shadow rounded-lg p-6" style={{ height: 400 }}>
+        <div className="mt-10 bg-zinc-50 shadow rounded-lg p-6" style={{ height: 400 }}>
           <ReactFlow
             nodes={nodes}
             edges={edges}

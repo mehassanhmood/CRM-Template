@@ -36,27 +36,27 @@ export default function CaseStudies() {
   const [activeCase, setActiveCase] = useState(0);
 
   return (
-    <div className="py-12 bg-white">
+    <div className="py-12 bg-teal-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-teal-50 sm:text-4xl">
             Case Studies
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="mt-4 text-xl text-teal-50">
             Real-world examples of our CRM implementations
           </p>
         </div>
 
         <div className="mt-10">
-          <div className="bg-gray-50 shadow rounded-lg p-6">
+          <div className="bg-zinc-50 shadow rounded-lg p-6">
             <div className="flex space-x-4 mb-6">
               {caseStudies.map((study, index) => (
                 <button
                   key={study.title}
                   className={`px-4 py-2 rounded-md ${
                     activeCase === index
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                      ? 'bg-teal-600 text-teal-50'
+                      : 'bg-teal-100 text-teal-800 hover:bg-teal-200'
                   }`}
                   onClick={() => setActiveCase(index)}
                 >
@@ -66,10 +66,10 @@ export default function CaseStudies() {
             </div>
 
             <div className="transition-all duration-300 ease-in-out">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h3 className="text-2xl font-bold text-teal-950 mb-2">
                 {caseStudies[activeCase].title}
               </h3>
-              <p className="text-gray-600 mb-6">{caseStudies[activeCase].description}</p>
+              <p className="text-teal-900 mb-6">{caseStudies[activeCase].description}</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -81,7 +81,7 @@ export default function CaseStudies() {
                       <YAxis />
                       <Tooltip />
                       <Legend />
-                      <Bar dataKey="value" fill="#9CA3AF" />
+                      <Bar dataKey="value" fill="#0f766e" />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -94,7 +94,7 @@ export default function CaseStudies() {
                       <YAxis />
                       <Tooltip />
                       <Legend />
-                      <Bar dataKey="value" fill="#60A5FA" />
+                      <Bar dataKey="value" fill="#0f766e" />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>

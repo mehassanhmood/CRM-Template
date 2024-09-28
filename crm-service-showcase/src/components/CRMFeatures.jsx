@@ -12,13 +12,13 @@ const features = [
 
 export default function CRMFeatures() {
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12 bg-teal-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-teal-950 sm:text-4xl">
             CRM Implementation Features
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="mt-4 text-xl text-teal-900">
             Discover the powerful features of our CRM implementation
           </p>
         </div>
@@ -27,15 +27,15 @@ export default function CRMFeatures() {
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.title} className="pt-6">
-                <div className="flow-root bg-white rounded-lg px-6 pb-8">
+                <div className="flow-root bg-zinc-50 rounded-lg px-6 pb-8">
                   <div className="-mt-6">
                     <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
-                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <span className="inline-flex items-center justify-center p-3 bg-teal-500 rounded-md shadow-lg">
+                        <feature.icon className="h-6 w-6 text-teal-50" aria-hidden="true" />
                       </span>
                     </div>
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">{feature.title}</h3>
-                    <p className="mt-5 text-base text-gray-500">{feature.description}</p>
+                    <h3 className="mt-8 text-lg font-medium text-zinc-900 tracking-tight">{feature.title}</h3>
+                    <p className="mt-5 text-base text-zinc-500">{feature.description}</p>
                   </div>
                 </div>
               </div>

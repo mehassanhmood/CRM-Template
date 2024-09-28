@@ -28,25 +28,25 @@ export default function CRMDashboard() {
   const [timeFrame, setTimeFrame] = useState('6M');
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12 bg-teal-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-teal-50 sm:text-4xl">
             CRM Analytics Dashboard
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="mt-4 text-xl text-teal-50">
             Interactive demo of CRM analytics and reporting capabilities
           </p>
         </div>
 
         <div className="mt-10">
-          <div className="bg-white shadow rounded-lg p-6">
+          <div className="bg-zinc-50 shadow rounded-lg p-6">
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-lg font-medium text-gray-900">Sales Performance</h3>
+              <h3 className="text-lg font-medium text-teal-950">Sales Performance</h3>
               <select
                 value={timeFrame}
                 onChange={(e) => setTimeFrame(e.target.value)}
-                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-zinc-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md"
               >
                 <option value="6M">Last 6 Months</option>
                 <option value="1Y">Last Year</option>
@@ -60,24 +60,24 @@ export default function CRMDashboard() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="sales" stroke="#60A5FA" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="sales" stroke="#0f766e" activeDot={{ r: 8 }} />
               </LineChart>
             </ResponsiveContainer>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <div className="bg-white shadow rounded-lg p-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Customer Segmentation</h3>
+            <div className="bg-zinc-50 shadow rounded-lg p-6">
+              <h3 className="text-lg font-medium text-teal-950 mb-4">Customer Segmentation</h3>
               <ResponsiveContainer width="100%" height={300}>
                 <PieChart>
-                  <Pie dataKey="value" data={customerSegmentationData} fill="#60A5FA" label />
+                  <Pie dataKey="value" data={customerSegmentationData} fill="#0f766e" label />
                   <Tooltip />
                 </PieChart>
               </ResponsiveContainer>
             </div>
 
-            <div className="bg-white shadow rounded-lg p-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Customer Retention Rates</h3>
+            <div className="bg-zinc-50 shadow rounded-lg p-6">
+              <h3 className="text-lg font-medium text-teal-950 mb-4">Customer Retention Rates</h3>
               <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={retentionData}>
                   <CartesianGrid strokeDasharray="3 3" />
@@ -85,7 +85,7 @@ export default function CRMDashboard() {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="retention" fill="#34D399" />
+                  <Bar dataKey="retention" fill="#0f766e" />
                 </BarChart>
               </ResponsiveContainer>
             </div>
