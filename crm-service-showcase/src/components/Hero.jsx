@@ -2,7 +2,7 @@ import React from 'react'
 
 function Hero() {
   return (
-    <div className="bg-blue-500 text-white py-20">
+    <div className="bg-teal-500 text-white py-20">
       <div className="container mx-auto px-6 text-center">
         <h1 className="text-5xl font-bold mb-2">Transform Your Customer Relationships</h1>
         <h2 className="text-2xl mb-8">Powerful CRM Solutions for Growing Businesses</h2>
