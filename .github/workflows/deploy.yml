@@ -1,0 +1,25 @@
+name: CD for React and FastAPI App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Deploy to VPS via SSH
+      run: |
+        ssh -o StrictHostKeyChecking=no root@185.28.23.224 << 'EOF'
+          cd /root/CRM/CRM-Template/crm-service-showcase
+          git pull origin main
+          docker-compose up --build -d
+        EOF
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
