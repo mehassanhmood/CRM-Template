@@ -12,10 +12,14 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
+      
+     # Install sshpass
+    - name: Install sshpass
+      run: sudo apt-get update && sudo apt-get install -y sshpass
 
     - name: Deploy to VPS via SSH
       run: |
-        ssh -o StrictHostKeyChecking=no root@185.28.23.224 << 'EOF'
+        sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no root@185.28.23.224 << 'EOF'
           cd /root/CRM/CRM-Template/crm-service-showcase
           git pull origin main
           docker-compose up --build -d
@@ -23,3 +27,4 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
