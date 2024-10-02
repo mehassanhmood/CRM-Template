@@ -14,10 +14,10 @@ export default function CustomerJourneyMap() {
     <div className="py-12 bg-teal-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-teal-950 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-teal-900 sm:text-4xl">
             Customer Journey Map
           </h2>
-          <p className="mt-4 text-xl text-teal-950">
+          <p className="mt-4 text-xl text-teal-900">
             See how our CRM system supports each stage of the customer lifecycle
           </p>
         </div>
@@ -30,8 +30,8 @@ export default function CustomerJourneyMap() {
             <div className="relative flex justify-between">
               {stages.map((stage, index) => (
                 <div key={stage.title} className="text-center">
-                  <span className="relative z-10 w-12 h-12 flex items-center justify-center bg-zinc-50 border-2 border-teal-500 rounded-full">
-                    <stage.icon className="w-6 h-6 text-teal-500" />
+                  <span className="relative z-10 w-12 h-12 flex items-center justify-center bg-zinc-50 border-2 border-blue-500 rounded-full">
+                    <stage.icon className="w-6 h-6 text-blue-500" />
                   </span>
                   <div className="mt-2">
                     <h3 className="text-lg font-medium text-zinc-900">{stage.title}</h3>

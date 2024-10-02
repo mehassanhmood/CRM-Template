@@ -21,9 +21,9 @@ function App() {
                 <CRMFeatures />
                 <CRMWorkflow />
                 <CustomerJourneyMap />
-                <CRMDashboard />
-                <CRMIntegrationMap />
-                <CaseStudies />
+                {/* <CRMDashboard /> */}
+                {/* <CRMIntegrationMap /> */}
+                {/* <CaseStudies /> */}
                 <Pricing />
               </>
             } />

@@ -15,7 +15,7 @@ export default function CRMFeatures() {
     <div className="py-12 bg-teal-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-teal-950 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-teal-900 sm:text-4xl">
             CRM Implementation Features
           </h2>
           <p className="mt-4 text-xl text-teal-900">
@@ -30,7 +30,7 @@ export default function CRMFeatures() {
                 <div className="flow-root bg-zinc-50 rounded-lg px-6 pb-8">
                   <div className="-mt-6">
                     <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-teal-500 rounded-md shadow-lg">
+                      <span className="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
                         <feature.icon className="h-6 w-6 text-teal-50" aria-hidden="true" />
                       </span>
                     </div>

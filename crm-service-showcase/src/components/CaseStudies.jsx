@@ -36,13 +36,13 @@ export default function CaseStudies() {
   const [activeCase, setActiveCase] = useState(0);
 
   return (
-    <div className="py-12 bg-teal-900">
+    <div className="py-12 bg-teal-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-teal-50 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-teal-900 sm:text-4xl">
             Case Studies
           </h2>
-          <p className="mt-4 text-xl text-teal-50">
+          <p className="mt-4 text-xl text-teal-900">
             Real-world examples of our CRM implementations
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function CaseStudies() {
             </div>
 
             <div className="transition-all duration-300 ease-in-out">
-              <h3 className="text-2xl font-bold text-teal-950 mb-2">
+              <h3 className="text-2xl font-bold text-teal-900 mb-2">
                 {caseStudies[activeCase].title}
               </h3>
               <p className="text-teal-900 mb-6">{caseStudies[activeCase].description}</p>
