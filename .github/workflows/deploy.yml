@@ -22,7 +22,8 @@ jobs:
         sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no root@185.28.23.224 << 'EOF'
           cd /root/CRM/CRM-Template/crm-service-showcase
           git pull origin main
-          docker-compose up --build -d
+          docker compose down
+          docker compose up --build -d
         EOF
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
