@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LineChart, Line, BarChart, Bar, PieChart, Pie, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const salesData = [
   { name: 'Jan', sales: 4000 },
@@ -23,6 +23,9 @@ const retentionData = [
   { name: '1-2 years', retention: 40 },
   { name: '2+ years', retention: 30 },
 ];
+
+const pieColors = ['#14b8a6', '#0d9488', '#0f766e'];
+const barColors = ['#14b8a6', '#0d9488', '#0f766e', '#115e59', '#134e4a'];
 
 export default function CRMDashboard() {
   const [timeFrame, setTimeFrame] = useState('6M');
@@ -48,7 +51,7 @@ export default function CRMDashboard() {
                 onChange={(e) => setTimeFrame(e.target.value)}
                 className="mt-1 block w-full pl-3 pr-10 py-2 text-teal-900 text-base border-zinc-50 focus:outline-none focus:ring-teal-900 focus:border-teal-900 sm:text-sm rounded-md"
               >
-                <option value="6M" >Last 6 Months</option>
+                <option value="6M">Last 6 Months</option>
                 <option value="1Y">Last Year</option>
                 <option value="ALL">All Time</option>
               </select>
@@ -70,8 +73,17 @@ export default function CRMDashboard() {
               <h3 className="text-lg font-medium text-teal-900 mb-4">Customer Segmentation</h3>
               <ResponsiveContainer width="100%" height={300}>
                 <PieChart>
-                  <Pie dataKey="value" data={customerSegmentationData} fill="#0f766e" label />
+                  <Pie
+                    dataKey="value"
+                    data={customerSegmentationData}
+                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                  >
+                    {customerSegmentationData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={pieColors[index % pieColors.length]} />
+                    ))}
+                  </Pie>
                   <Tooltip />
+                  <Legend />
                 </PieChart>
               </ResponsiveContainer>
             </div>
@@ -84,8 +96,11 @@ export default function CRMDashboard() {
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
-                  <Legend />
-                  <Bar dataKey="retention" fill="#0f766e" />
+                  <Bar dataKey="retention" >
+                    {retentionData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={barColors[index % barColors.length]} />
+                    ))}
+                  </Bar>
                 </BarChart>
               </ResponsiveContainer>
             </div>
