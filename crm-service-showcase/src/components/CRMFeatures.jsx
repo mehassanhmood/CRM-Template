@@ -30,12 +30,12 @@ export default function CRMFeatures() {
                 <div className="flow-root bg-zinc-50 rounded-lg px-6 pb-8">
                   <div className="-mt-6">
                     <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
-                        <feature.icon className="h-6 w-6 text-teal-50" aria-hidden="true" />
+                      <span className="inline-flex items-center justify-center p-3 bg-blue-600 rounded-md shadow-lg">
+                        <feature.icon className="h-6 w-6 text-blue-50" aria-hidden="true" />
                       </span>
                     </div>
-                    <h3 className="mt-8 text-lg font-medium text-zinc-900 tracking-tight">{feature.title}</h3>
-                    <p className="mt-5 text-base text-zinc-500">{feature.description}</p>
+                    <h3 className="mt-8 text-lg font-medium text-teal-950 tracking-tight">{feature.title}</h3>
+                    <p className="mt-5 text-base text-teal-950">{feature.description}</p>
                   </div>
                 </div>
               </div>

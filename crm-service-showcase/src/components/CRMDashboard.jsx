@@ -24,8 +24,8 @@ const retentionData = [
   { name: '2+ years', retention: 30 },
 ];
 
-const pieColors = ['#14b8a6', '#0d9488', '#0f766e'];
-const barColors = ['#14b8a6', '#0d9488', '#0f766e', '#115e59', '#134e4a'];
+const pieColors = ['#FF6B6B', '#4ECDC4', '#45B7D1'];
+const barColors = ['#FFA07A', '#98D8C8', '#7FDBDA', '#82B0D2', '#8675A9'];
 
 export default function CRMDashboard() {
   const [timeFrame, setTimeFrame] = useState('6M');

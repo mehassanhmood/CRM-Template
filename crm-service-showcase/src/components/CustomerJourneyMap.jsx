@@ -30,12 +30,12 @@ export default function CustomerJourneyMap() {
             <div className="relative flex justify-between">
               {stages.map((stage, index) => (
                 <div key={stage.title} className="text-center">
-                  <span className="relative z-10 w-12 h-12 flex items-center justify-center bg-zinc-50 border-2 border-blue-500 rounded-full">
+                  <span className="relative z-10 w-12 h-12 flex items-center justify-center bg-blue-50 border-2 border-blue-600 rounded-full">
                     <stage.icon className="w-6 h-6 text-blue-500" />
                   </span>
                   <div className="mt-2">
-                    <h3 className="text-lg font-medium text-zinc-900">{stage.title}</h3>
-                    <p className="mt-1 text-sm text-zinc-500 max-w-xs">{stage.description}</p>
+                    <h3 className="text-lg font-medium text-teal-950">{stage.title}</h3>
+                    <p className="mt-1 text-sm text-teal-900 max-w-xs">{stage.description}</p>
                   </div>
                 </div>
               ))}

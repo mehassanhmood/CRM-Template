@@ -30,8 +30,8 @@ function Hero() {
   const getButtonClass = (component) => {
     const baseClass = "font-bold rounded-full py-2 px-4 shadow-lg uppercase tracking-wider transition-colors duration-200";
     return activeComponent === component
-      ? `${baseClass} bg-teal-100 text-teal-800`
-      : `${baseClass} bg-white text-teal-800 hover:bg-teal-100`;
+      ? `${baseClass} bg-teal-100 text-teal-700`
+      : `${baseClass} bg-zinc-50 text-teal-700 hover:bg-teal-100`;
   };
 
   return (
